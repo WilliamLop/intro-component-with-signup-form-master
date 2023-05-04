@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 74%) ;
+    --Green: hsl(154, 59%, 51%);
+
+    /* ### Accent */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* ### Neutral */
+    --DarkBlue: hsl(249, 10%, 26%) ;
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Red);
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card__info{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.card__title{
+    color: white;
+}
+
+.card__paragraph{
+    color: #eee;
+    padding: 0 .5rem;
+}
+
+
+.card__form--title{
+    margin: .5rem auto;
+    background: var(--Blue);
+    padding: 1.1rem 0;
+    border-radius: .5rem;
+}
+
+.form__title strong{
+    color: white;
+}
+.form__title{
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    color: #eee;
+}
+
+.form{
+    background-color: white;
+    padding: 1rem;
+    margin: 2rem auto;
+    border-radius: .7rem;
+    position: relative;
+
+}
+
+.form .input{
+    box-sizing: border-box;
+    display: block;
+    width: 99%;
+    margin: 1rem auto;
+    padding: 1.3rem 0 1.3rem 1rem;
+    border-radius: .3rem;
+    border: 1px solid #bebebe;
+    font: inherit;
+}
+.input-container{
+    position: relative;
+}
+.error-icon{
+    position: absolute;
+    z-index: 100;
+    right: 25px;
+    top: 22%;
+    display: none;
+}
+
+.text-error{
+    text-align: right;
+    font-size:.8em;
+    margin-top: -.6rem;
+    color: var(--Red);
+    padding-right: .3rem;
+    display: none;
+}
+.input-container.error .error-icon,
+.input-container.error .text-error{
+    display: block;
+}
+
+.email.invalid::placeholder{
+    color: var(--Red) !important;
+}
+
+.form .input::placeholder{
+    font-weight: 600;
+    font-size: .9em;
+    color: #3131317e;
+
+}
+
+.submit{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.2rem;
+    border: none;
+    background-color: var(--Green);
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: .50s ease-in-out;
+}
+
+.submit:hover{
+    background-color: #77E2B4;
+}
+
+.form__paragraph{
+    text-align: center;
+    font-size:.8em;
+    padding: 0 1.4rem;
+    color: var(--GrayishBlue);
+    line-height: 2;
+}
+
+.form__paragraph strong{
+    color: var(--Red);
+}
+
+@media (min-width: 61rem){
+    body{
+        background-image: url(images/bg-intro-desktop.png);
+    }
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        height: 100vh;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+        
+    .card__info{
+        text-align: left;
+        padding: 2.5rem 0;
+    }
+
+    .card__title{
+        color: white;
+        width: 400px;
+        font-size: 2.5em;
+    }
+
+    .card__paragraph{
+        padding: 0 0;
+        width: 510px;
+    }
+
+    .card__form--title{
+        margin: 0;
+        padding: .9rem 0;
+    }
+
+    .form__title strong{
+        color: white;
+    }
+    .form__title{
+        text-align: center;
+        width: 400px;
+    }
+
+    .form{
+        background-color: white;
+        padding: 1rem 2rem;
+        margin: 1.5rem auto 0 auto;
+        border-radius: .7rem;
+    }
+
+    .form .input{
+        padding: .7rem 1rem;
+    }
+
+    .form .input::placeholder{
+        font-size: .8em;
+    }
+
+}
